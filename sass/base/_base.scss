@@ -5,6 +5,32 @@
   box-sizing: inherit;
   padding: 0;
 }
+
+@font-face {
+  src: url(../fonts/B_Yekan/Yekan.ttf);
+  font-family: font-main;
+}
+@font-face {
+  src: url(../fonts/Far_Nazanin/Far_Nazanin.ttf);
+  font-family: font-header;
+}
+@font-face {
+  src: url(../fonts/Far_Diplomat/Far_Diplomat.ttf);
+  font-family: font-text;
+}
+@font-face {
+  src: url(../fonts/IranNastaliq/IranNastaliq.ttf);
+  font-family: font-nastaliq;
+}
+@font-face {
+  src: url(../fonts/Suls-mir-emad/Suls.ttf);
+  font-family: font-nastaliq-2;
+}
+@font-face {
+  src: url(../fonts/Aviny/Aviny.ttf);
+  font-family: font-aviny;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -13,7 +39,20 @@ html {
 body {
   font-family: sans-serif;
   direction: rtl;
+
+  min-height: 100vh;
+  // min-width: 100vw;
+
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    to right,
+    rgba($color-img-pink-white, 0.9),
+    rgba($color-img-pink-light, 0.9)
+  );
 }
 
 ::selection {
+  color: $color-white;
+  background-color: $color-pink-light;
 }
