@@ -8,6 +8,10 @@
   padding: 1rem 2rem;
   border-radius: 4px;
 
+  @include res(tab-small) {
+    width: 80%;
+  }
+
   @include res(phone) {
     width: 90%;
   }
@@ -117,6 +121,7 @@
   height: 90%;
   @include res(tab-small) {
     padding: 2rem 0rem;
+    height: 100%;
   }
 
   @include res(phone) {
@@ -143,10 +148,11 @@
   }
 
   .container__icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+    padding: 4rem 0;
+    width: 100%;
     margin-top: auto;
     background-color: $color-text-white;
     direction: ltr;
@@ -154,10 +160,15 @@
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: 1rem;
+      height: 13rem;
       transition: all 0.2s;
+
+      @include res(phone) {
+        border-bottom: 1px solid $color-img-pink-white;
+      }
       &:hover {
         // box-shadow: 0 0.2rem 0.2rem rgba($color-black, 0.15);
         transform: scale(1.1);
@@ -174,12 +185,9 @@
 
       h3 {
         font-size: 2rem;
-        font-family: font-text;
-        // color: $color-;
       }
       h4 {
         font-size: 1.8rem;
-        font-family: font-text;
         color: $color-black-dark;
       }
     }
