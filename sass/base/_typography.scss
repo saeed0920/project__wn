@@ -115,6 +115,10 @@
   align-items: center;
   justify-content: space-between;
   height: 90%;
+  @include res(tab-small) {
+    padding: 2rem 0rem;
+  }
+
   @include res(phone) {
     padding: 1rem 2rem;
   }
@@ -137,6 +141,50 @@
       margin-top: 2rem;
     }
   }
+
+  .container__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: auto;
+    background-color: $color-text-white;
+    direction: ltr;
+    & .box {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      transition: all 0.2s;
+      &:hover {
+        // box-shadow: 0 0.2rem 0.2rem rgba($color-black, 0.15);
+        transform: scale(1.1);
+
+        & > h3 {
+          color: $color-img-pink-light;
+        }
+      }
+      .icon {
+        width: 4rem;
+        height: 4rem;
+        fill: $color-pink-light;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-family: font-text;
+        // color: $color-;
+      }
+      h4 {
+        font-size: 1.8rem;
+        font-family: font-text;
+        color: $color-black-dark;
+      }
+    }
+  }
+
   .copy-right {
     margin-top: auto;
     font-size: 2rem;
