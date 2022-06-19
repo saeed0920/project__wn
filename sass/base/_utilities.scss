@@ -1,0 +1,10 @@
+.hide {
+  display: none !important;
+}
+.active-selector {
+  transition: all 0.2s;
+  color: $color-pink-light;
+  &::after {
+    width: 100%;
+  }
+}

@@ -34,6 +34,14 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+
+  @include res(tab-small) {
+    font-size: 58%;
+  }
+
+  @include res(phone) {
+    font-size: 52%;
+  }
 }
 
 body {
@@ -41,7 +49,6 @@ body {
   direction: rtl;
 
   min-height: 100vh;
-  // min-width: 100vw;
 
   display: grid;
   place-items: center;
@@ -50,6 +57,7 @@ body {
     rgba($color-img-pink-white, 0.9),
     rgba($color-img-pink-light, 0.9)
   );
+  padding: 2rem 0;
 }
 
 ::selection {

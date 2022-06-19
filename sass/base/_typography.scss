@@ -7,6 +7,10 @@
   grid-template-rows: 10rem 1fr;
   padding: 1rem 2rem;
   border-radius: 4px;
+
+  @include res(phone) {
+    width: 90%;
+  }
 }
 
 .navbar {
@@ -14,8 +18,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   border-bottom: 2px solid #b2bec3;
+
+  @include res(phone) {
+    justify-content: space-between;
+  }
   &__link {
     color: $color-img-pink-light;
     text-decoration: none;
@@ -47,6 +54,7 @@
 .main {
   padding-top: 1rem;
   grid-row: 2 / -1;
+  min-height: 75rem;
 }
 
 //
@@ -56,7 +64,11 @@
   grid-auto-rows: 35rem;
   background-color: $color-text-white;
   grid-gap: 2rem;
-  padding: 2rem;
+
+  @include res(tab-small) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-auto-rows: 35rem;
+  }
 
   &__container {
     box-shadow: 0 0.5rem 0.6rem rgba($color-black, 0.15);
@@ -64,7 +76,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     justify-content: space-between;
     text-align: right;
 
@@ -91,6 +102,47 @@
       padding: 1rem 0;
       font-size: 2rem;
       font-family: font-header;
+    }
+  }
+}
+
+//
+.section-2 {
+  grid-row: 2 / 3;
+  padding: 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  @include res(phone) {
+    padding: 1rem 2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-family: font-header;
+    @include res(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  .text {
+    font-size: 3rem;
+    text-align: center;
+    font-family: font-text;
+    margin-top: 4rem;
+    @include res(phone) {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+  }
+  .copy-right {
+    margin-top: auto;
+    font-size: 2rem;
+    font-family: font-text;
+    @include res(phone) {
+      font-size: 1.5rem;
     }
   }
 }
